@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}{% endblock %}
+
+    <meta http-equiv="Content-Language" content="ru">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body onload="{% block onload %}{% endblock %}">
+    <div id="menu">
+        <table border=1><tr><td>
+            <a href="/">home</a></td>
+            <td><a href="{{ url(controller='plugin', action='index') }}">plugin</a></td>
+            {% for td in c.plugin_menu %}
+                {{ td }}
+            {% endfor%}
+        </tr></table>
+    </div>
+    <div id="body">
+        <h1>The example of yapsy plugin project</h1>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+

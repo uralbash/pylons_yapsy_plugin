@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    Welcome on homepage.
+    {% for plugin in c.plugin_address %}
+        {{ plugin }}
+    {% endfor %}
+{% endblock %}
+
+{% block onload %}
+    {% for onload in c.onload %}
+        {{ onload }}
+    {% endfor %}
+{% endblock %}
+
+{% block head %}
+{% for style in c.styles %}
+    {{ style }}
+{% endfor %}
+{% endblock %}
+

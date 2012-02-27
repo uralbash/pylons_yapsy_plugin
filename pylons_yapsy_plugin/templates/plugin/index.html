@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Plugins{% endblock %}
+
+{% block content %}
+    <table border=1>
+        <caption>Loaded plugins:</caption>
+        <th>name</th>
+        <th>type</th>
+        <th>action</th>
+        <tbody>
+    {% for plugin in c.plugins %}
+        <tr>
+            <td>{{ plugin.name }}</td>
+            <td>{{ plugin.category }}</td>
+            <td>{% if plugin.category %}
+                <a href="{{ url(controller='plugin', action='create',
+                    name=plugin.name) }}"><button>Deactivate</button></a>
+                {% else %}
+                <form method="POST"
+                    action="{{ url(controller='plugin', action='delete',
+                            id=c.getIdByName(plugin.name)) }}">
+                    <button>Activate</button>
+                    <input type="hidden" name="_method" value="DELETE" />
+                </form>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    </ul>
+{% endblock %}
+

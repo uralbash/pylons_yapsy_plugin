@@ -1,0 +1,10 @@
+[Core]
+Name = IP & MAC
+Module = ipmac
+
+[Documentation]
+Author = Svintsov Dmitry
+Version = 0.1
+Website = http://.com
+Description = ip mac logger
+Category = menu

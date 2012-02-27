@@ -1,0 +1,10 @@
+[Core]
+Name = Open Street Map
+Module = osm_map
+
+[Documentation]
+Author = Svintsov Dmitry
+Version = 0.1
+Website = http://uralbash.com
+Description = show open street map
+Category = Map

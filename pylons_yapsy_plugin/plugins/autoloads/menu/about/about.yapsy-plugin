@@ -1,0 +1,10 @@
+[Core]
+Name = About plugin
+Module = about
+
+[Documentation]
+Author = Svintsov Dmitry
+Version = 0.1
+Website = http://uralbash.com
+Description = about plugin
+Category = menu

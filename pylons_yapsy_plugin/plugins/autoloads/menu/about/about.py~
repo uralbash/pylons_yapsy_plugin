@@ -1,0 +1,24 @@
+# coding=utf-8
+from pylons import request, response, session, tmpl_context as c, url
+from gottlieb.lib.base import render
+from gottlieb.plugins.categories import menu
+from gottlieb.model.meta import Session as s
+
+class ipmac_plugin(menu.Menu):
+    """ IP & MAC
+    """
+    name = 'IP & MAC'
+
+    def init_plugin(self):
+        print "--> initialization IP & MAC plugin..."
+        return "--> complete install IP & MAC"
+
+    def get_html_menu(self):
+        return render('/plugins/menu/ipmac/menu.html')
+
+    def get_style(self):
+        return ''
+
+    def get_onload(self):
+        return ''
+

@@ -1,0 +1,7 @@
+class Map(object):
+    """Plugins of this class complements Map block"""
+
+    name = "No Format"
+
+    def get_html_features(self):
+        return 'Base Map plugin'
